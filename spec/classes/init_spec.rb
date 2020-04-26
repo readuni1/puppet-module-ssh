@@ -258,6 +258,19 @@ describe 'ssh' do
       :sshd_config_fixture    => 'sshd_config_ubuntu1804',
       :ssh_config_fixture     => 'ssh_config_ubuntu1804',
     },
+    'Ubuntu-2004' => {
+      :architecture           => 'x86_64',
+      :osfamily               => 'Debian',
+      :operatingsystemrelease => '20.04',
+      :ssh_version            => 'OpenSSH_8.2p1'
+      :ssh_version_numeric    => '8.2',
+      :ssh_packages           => ['openssh-server', 'openssh-client'],
+      :sshd_config_mode       => '0600',
+      :sshd_service_name      => 'ssh',
+      :sshd_service_hasstatus => true,
+      :sshd_config_fixture    => 'sshd_config_ubuntu2004',
+      :ssh_config_fixture     => 'ssh_config_ubuntu2004',
+    },
   }
 
   osfamily_matrix.each do |os, facts|
